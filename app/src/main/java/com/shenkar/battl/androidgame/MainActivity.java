@@ -18,10 +18,11 @@ public class MainActivity extends Activity {
     private Button play;
     private Button playmusic;
     private static MyMusicRunnable musicPlayer;
-
+    private  Button settings;
     private void init(){
         play=(Button)findViewById(R.id.play);
         playmusic=(Button)findViewById(R.id.playmusic);
+        settings=(Button)findViewById(R.id.settings);
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,6 +31,13 @@ public class MainActivity extends Activity {
             }
         });
 
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,settings.class));
+
+            }
+        });
         playmusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
